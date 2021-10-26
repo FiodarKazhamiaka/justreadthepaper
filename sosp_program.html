@@ -1,0 +1,2414 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SOSP 2021 - Symposium on Operating Systems Principles</title>
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="SOSP 2019" />
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!--side-bar-->
+        <div class="col-sm-3 col-md-2 sidebar">
+            <!--logo-->
+  <div class="logo">
+<!--       <a href="https://sosp2021.mpi-sws.org" target="_blank">
+	<img src="images/logo.png" alt="SOSP19"/>
+      </a>
+    <div></div> -->
+    <a href="https://www.sigops.org/" target="_blank"><img src="images/sigops.jpg" alt="SIGOPS"/></a>
+    <div>In cooperation with</div>
+    <a href="https://www.usenix.org/" target="_blank"><img src="images/usenix.png" alt="USENIX"/></a>
+  </div>
+  <!--logo-->
+
+  <div class="socials">
+  	<ul>
+  		<li>
+<!-- Twitter follow button with inline css and no external javascript dependencies -->
+<style>
+  #follow-button {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+
+    position: relative;
+    height: 20px;
+    box-sizing: border-box;
+    padding: 1px 12px 1px 12px;
+    background-color: #1d9bf0;
+    color: #fff;
+    border-radius: 9999px;
+    font-weight: 500;
+    cursor: pointer;
+
+    outline: 0;
+    text-decoration: none;
+    
+    font: normal normal normal 12px/18px 'Helvetica Neue',Arial,sans-serif;
+
+    transition: 0.5s all ease;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    -ms-transition: 0.5s all ease;
+  }
+
+  #follow-button:hover {
+    background-color: #0c7abf;
+  }
+
+  #follow-button i {
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: transparent 0 0 no-repeat;
+        background-image: none;
+    background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2072%2072%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h72v72H0z%22%2F%3E%3Cpath%20class%3D%22icon%22%20fill%3D%22%23fff%22%20d%3D%22M68.812%2015.14c-2.348%201.04-4.87%201.744-7.52%202.06%202.704-1.62%204.78-4.186%205.757-7.243-2.53%201.5-5.33%202.592-8.314%203.176C56.35%2010.59%2052.948%209%2049.182%209c-7.23%200-13.092%205.86-13.092%2013.093%200%201.026.118%202.02.338%202.98C25.543%2024.527%2015.9%2019.318%209.44%2011.396c-1.125%201.936-1.77%204.184-1.77%206.58%200%204.543%202.312%208.552%205.824%2010.9-2.146-.07-4.165-.658-5.93-1.64-.002.056-.002.11-.002.163%200%206.345%204.513%2011.638%2010.504%2012.84-1.1.298-2.256.457-3.45.457-.845%200-1.666-.078-2.464-.23%201.667%205.2%206.5%208.985%2012.23%209.09-4.482%203.51-10.13%205.605-16.26%205.605-1.055%200-2.096-.06-3.122-.184%205.794%203.717%2012.676%205.882%2020.067%205.882%2024.083%200%2037.25-19.95%2037.25-37.25%200-.565-.013-1.133-.038-1.693%202.558-1.847%204.778-4.15%206.532-6.774z%22%2F%3E%3C%2Fsvg%3E);
+  }
+
+  #twitter-follow {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
+  }
+</style>
+<div id="twitter-follow"><a id="follow-button" title="Follow @sosp2021 on Twitter" href="https://twitter.com/sosp2021"><i></i><span>Follow <b>@sosp2021</b></span></a></div></li>
+  	</ul>
+  </div>
+
+  <!--sidebar menu-->
+  <div class="top-nav">
+    <div class="nav1">
+      <ul class="nav nav-sidebar">
+        <li><a id="homenav" href="index.html">Home</a></li>
+        <li>
+          <b>Conference Details</b>
+          <ul>
+	    <li><a href="program.html">Program</a></li>
+	    <!--<li><a href="sched.html">Workshop and Tutorial Schedule</a></li>-->
+	    <li><a href="reg.html">Registration</a></li>
+	    <!-- <li><a href="venue.html">Venue</a></li> -->
+	    <!--<li><a href="sponsors.html">Sponsors</a></li>-->
+	    <!--<li><a href="tutorials.html">Tutorials</a></li>-->
+      <!--<li><a href="accepted.html">Accepted Papers</a></li>-->
+	    <li><a href="https://sysartifacts.github.io/sosp2021/">Artifact Evaluation</a></li>
+	    <li><a href="organizers.html">Organizers</a></li>
+	    <li><a href="sponsors.html">Sponsors</a></li>
+	    <li><a href="workshops.html">Workshops</a></li>
+          </ul>
+        </li>
+        <!--
+	<li>
+          <b>Local Information</b>
+          <ul>
+	    <li><a href="https://wp.nyu.edu/sosp2017tutorials/" 
+	    target="_blank">Tutorial</a></li>
+            <li><a href="bof.html">Birds of Feather</a></li>
+            <li><a href="excursion.html">Excursion</a></li>
+	    <li><a href="reg.html">Registration</a></li>
+	  </ul>
+	</li>-->
+	<li>
+	<b>Calls for Participation</b>
+	  <ul>
+	    <li><a href="cfp.html">Call for Papers</a></li>
+	    <li><a href="cfw.html">Call for Workshops</a></li>
+		<!--
+	    <li><a href="cft.html">Call for Tutorials</a></li>-->
+	    <li><a href="cfsrc.html">Student Research Competition</a></li>
+		<!--<li><a href="cfss.html">Call for Scholarships</a></li>
+		-->
+	    <!-- <li><a href="cfs.html">Call for Sponsors</a></li> -->
+	    <li><a href="mentoring.html">Mentoring</a></li>
+	  </ul>
+	</li>
+	<li>
+          <b>Additional Information</b>
+          <ul>
+			<!--
+	    <li><a href="visa.html">Visa Information</a></li>
+	    <li><a href="cc.html">Child Care</a></li>-->
+	    <li><a href="final.html">Instructions for Authors</a></li>
+	    <li><a href="code.html">Code of Conduct</a></li>
+		<!--
+			<li><a href="dei.html">Diversity Plan</a></li>
+			-->
+	    <li><a href="http://www.sosp.org/">Prior SOSPs</a></li>
+          </ul>
+        </li>
+      </ul>
+	</div>	
+	
+	<div style="padding-top: 30px">
+		<ul>
+			<li><a href="https://imprint.mpi-klsb.mpg.de/sws/sosp2021.mpi-sws.org/">IMPRINT</a></li>
+			<li><a href="https://data-protection.mpi-klsb.mpg.de/sws/sosp2021.mpi-sws.org/">DATA PROTECTION</a></li>
+		  </span>
+	  </div>
+  </div>
+  <!--sidebar menu-->
+          <div class="clearfix"> </div>				
+        </div>
+        <!--//side-bar-->
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <!--banner-->
+          <div style="width:100%; text-align: center; background-color: black;">
+            <img src="../images/banner.png" style="width: 100%; max-width: 1200px; margin: auto;"/>
+          </div>
+<!--           <div class="banner">
+            <div class="jumbotron banner-text">
+              <h2>SOSP 2021</h2>
+              <p>
+              The 28th ACM Symposium on Operating Systems Principles<br>
+              October 25-29, 2021
+              </p>
+            </div>
+          </div> -->
+          <div style="background-color: black !important; width: 100%; margin-top: -50px;">
+          <p style="color: white; text-align: center; font-weight: 500; font-size: 20pt">
+          The 28th ACM Symposium on Operating Systems Principles<br>
+          October 26-29, 2021
+          </p>
+          <nav class="navbar navbar-default" role="navigation"> 
+  <div class="navbar-header"> 
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sosp17-navbar-collapse"> 
+      <span class="icon-bar"></span> 
+      <span class="icon-bar"></span> 
+      <span class="icon-bar"></span> 
+    </button> 
+  </div>
+  <div class="collapse navbar-collapse" id="sosp17-navbar-collapse"> 
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Conference Details<b class="caret"></b> </a> 
+        <ul class="dropdown-menu">
+	  <!-- <li><a href="venue.html">Venue</a></li> -->
+    <li><a href="program.html">Program</a></li>
+    <li><a href="reg.html">Registration</a></li>
+    <li><a href="https://sysartifacts.github.io/sosp2021/">Artifact Evaluation</a></li>
+	  <li><a href="organizers.html">Organizers</a></li>
+    <li><a href="sponsors.html">Sponsors</a></li>
+    <li><a href="workshops.html">Workshops</a></li>
+	</ul>
+      </li>
+      <li class="dropdown">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Calls for 
+		Participation<b class="caret"></b> </a>
+	<ul class="dropdown-menu">
+    <li><a href="cfp.html">Call for Papers</a></li>
+    <li><a href="cfw.html">Call for Workshops</a></li>
+    <li><a href="cfsrc.html">Student Research Competition</a></li>
+    <li><a href="mentoring.html">Mentoring</a></li>
+    <!-- <li><a href="cfs.html">Call for Sponsors</a></li> -->
+	</ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Additional Information<b class="caret"></b> </a> 
+        <ul class="dropdown-menu">
+    <li><a href="final.html">Instructions for Authors</a></li>
+    <li><a href="code.html">Code of Conduct</a></li>
+	  <li><a href="http://www.sosp.org/">Prior SOSPs</a></li>
+	</ul>
+      </li>
+    </ul> 
+  </div> 
+</nav>
+        </div>
+	  <!--//banner-->
+
+          <!--main-text-->
+          
+<div class="main-text">
+  <style>
+  .program {font-size:16px;}
+  .program p    {margin-bottom: 1em; line-height:  1.5;}
+  </style>
+  <div class="program">
+    <h3>SOSP 2021 Program</h3>
+
+    <div style="text-align:justify; width:80%; margin: auto; padding: 1.5% 3%; font-weight: 500">
+        <div style="text-align:justify; width:90%; margin: auto; background-color: #f6f6f6; padding: 1.5% 3%; font-weight: 400;">
+      <p>
+        <b>Logistics.</b>
+      SOSP 21 will be conducted virtually. Content will be delivered through Zoom webinars and Slack will be used for discussion.  The poster session will happen in Gather town -- see <a href="https://www.youtube.com/watch?v=4VDd3zar_cc">this 2 minute video</a> for an explanation.
+      </p>
+
+      <p>
+        <b>Mirrors.</b>
+      SOSP 21 will run in a mirrored fashion.
+The North America/Europe mirror (Mirror 1) will take place from 8 AM PDT to 5 PM PDT.
+The Asia/Australia mirror (Mirror 2) will take place from 8 AM China Standard Time to 5 PM China Standard Time.</p>
+
+
+<p>Videos will be played synchronously in both mirrors, and authors will be available to answer questions live during both mirrors. There will be different instances of the Ask Me Anything session and the Trivia session in each mirror, which will be conducted live. The business meeting will be conducted live at 8 AM PDT on Oct 27th. It will be recorded and played synchronously during the Asia/Australia mirror. </p>
+        </div>
+      </div>
+    
+    <!--<div class="col-md-12">
+      <p align="center">
+      <img class="icon-paper" src="images/icon-paper.png"></img> Paper PDF &nbsp;&nbsp;
+      <img class="icon-slide" src="images/icon-slide.png"></img> Talk Slides &nbsp;&nbsp;
+      <img class="icon-video" src="images/icon-video.png"></img> Talk Video &nbsp;&nbsp;
+      </p>
+      <p align="center">
+      <a href="program.pdf"><img class="icon-paper" src="images/icon-paper.png"/> SOSP Program (PDF)</a>
+      <a href="https://dl.acm.org/citation.cfm?id=3341301"><img class="icon-paper" src="images/icon-paper.png"/> Proceedings</a>
+      </p>
+    </div>
+    -->
+    <div class="col-md-12">
+
+    <span class="pull-right">
+<!-- Implements a timezone picker and some JS to rewrite dates to the selected timezone -->
+<script type="text/javascript">
+  function makeTimeString(begin, end, tz) {
+    // Begin and End are Date objects; TZ is a timezone string
+    s = begin.toLocaleString('en-gb', 
+      {day: 'numeric', weekday: 'short', hour: "numeric", minute: "numeric", timeZone: tz });
+    s = s + " - " + end.toLocaleString('en-gb', 
+      {hour: "numeric", minute: "numeric", timeZoneName: 'short', timeZone: tz});
+    return s;
+  }
+
+  function getCurrentTimezone() {
+    return Intl.DateTimeFormat().resolvedOptions().timeZone;
+  }
+
+  function time_to_string(t) {
+    if (t < 0) {
+      return "-" + time_to_string(-t);
+    }
+    var hours = (t / 60) >> 0;
+    var minutes = t % 60;
+    return ("0"+hours).slice(-2) + ":" + ("0"+minutes).slice(-2);
+  }
+
+  function timezone_to_string(tz) {
+    if (tz >= 0) {
+      return "+" + time_to_string(tz);
+    } else {
+      return time_to_string(tz);
+    }
+  }
+
+  function getTimezoneOffset(timeZone) {
+    // https://stackoverflow.com/questions/38399465/how-to-get-list-of-all-timezones-in-javascript
+    const now = new Date(Date.UTC(2021, 9, 25));
+    const tzString = now.toLocaleString('en-US', { timeZone });
+    const localString = now.toLocaleString('en-US');
+    const diff = (Date.parse(localString) - Date.parse(tzString)) / 3600000;
+    const offset = diff + now.getTimezoneOffset() / 60;
+    
+    return -offset * 60;
+  }
+
+  function createTimezoneSelector() {
+    elems = []
+    for (var i = 0; i < aryIannaTimeZones.length; i++) {
+      elem = {
+        "name": aryIannaTimeZones[i],
+        "value": getTimezoneOffset(aryIannaTimeZones[i])
+      };
+      elem["label"] = "UTC" + timezone_to_string(elem["value"]) + " " + elem["name"]
+      elems.push(elem);
+    }
+    elems.sort((a, b) => (a.value > b.value) ? 1 : ((a.value < b.value) ? -1 : (a.name > b.name ? 1 : -1)));
+
+    var sel = $('<select>');
+    $(elems).each(function() {
+      var opt = $("<option>").attr('value',this.name).text(this.label);
+      if (this.name == "America/Los_Angeles") {
+        opt = opt.attr("selected", true);
+      }
+      sel.append(opt);
+    })
+    sel.change(function(a, b) {
+      var tz = sel.find("option:selected").attr("value");
+      setTimezone(tz);
+    });
+    return sel;
+  }
+
+  function setTimezone(tz) {
+    console.log("Setting timezone to", tz);
+    $(".adjustabletime").each((a, b) => (changeTimezone(b, tz)));
+    $(".presentationtime").each((a, b) => (changePresentationTimezone(b, tz)));
+  }
+
+  function selectCurrentTimezone(sel) {
+    var tz = getCurrentTimezone();
+    sel.find("option[value='" + tz +"']").prop("selected", true);
+    setTimezone(tz);
+  }
+
+  function changeTimezone(element, tz) {
+    var begin = new Date(parseInt($(element).attr("begin")));
+    var end = new Date(parseInt($(element).attr("end")));
+
+    s = begin.toLocaleString('en-gb', 
+      {day: 'numeric', weekday: 'short', hour: "numeric", minute: "numeric", timeZone: tz });
+    s = s + " - " + end.toLocaleString('en-gb', 
+      {hour: "numeric", minute: "numeric", timeZoneName: 'short', timeZone: tz});
+
+    $(element).html(s);
+  }
+
+  function changePresentationTimezone(element, tz) {
+    var t = new Date(parseInt($(element).attr("time")));
+    
+    s = t.toLocaleString('en-gb', 
+      {hour: "numeric", minute: "numeric", timeZone: tz });
+
+    $(element).html(s);
+  }
+
+  var aryIannaTimeZones = [
+    'Europe/Andorra',
+    'Asia/Dubai',
+    'Asia/Kabul',
+    'Europe/Tirane',
+    'Asia/Yerevan',
+    'Antarctica/Casey',
+    'Antarctica/Davis',
+    'Antarctica/DumontDUrville', // https://bugs.chromium.org/p/chromium/issues/detail?id=928068
+    'Antarctica/Mawson',
+    'Antarctica/Palmer',
+    'Antarctica/Rothera',
+    'Antarctica/Syowa',
+    'Antarctica/Troll',
+    'Antarctica/Vostok',
+    'America/Argentina/Buenos_Aires',
+    'America/Argentina/Cordoba',
+    'America/Argentina/Salta',
+    'America/Argentina/Jujuy',
+    'America/Argentina/Tucuman',
+    'America/Argentina/Catamarca',
+    'America/Argentina/La_Rioja',
+    'America/Argentina/San_Juan',
+    'America/Argentina/Mendoza',
+    'America/Argentina/San_Luis',
+    'America/Argentina/Rio_Gallegos',
+    'America/Argentina/Ushuaia',
+    'Pacific/Pago_Pago',
+    'Europe/Vienna',
+    'Australia/Lord_Howe',
+    'Antarctica/Macquarie',
+    'Australia/Hobart',
+    'Australia/Currie',
+    'Australia/Melbourne',
+    'Australia/Sydney',
+    'Australia/Broken_Hill',
+    'Australia/Brisbane',
+    'Australia/Lindeman',
+    'Australia/Adelaide',
+    'Australia/Darwin',
+    'Australia/Perth',
+    'Australia/Eucla',
+    'Asia/Baku',
+    'America/Barbados',
+    'Asia/Dhaka',
+    'Europe/Brussels',
+    'Europe/Sofia',
+    'Atlantic/Bermuda',
+    'Asia/Brunei',
+    'America/La_Paz',
+    'America/Noronha',
+    'America/Belem',
+    'America/Fortaleza',
+    'America/Recife',
+    'America/Araguaina',
+    'America/Maceio',
+    'America/Bahia',
+    'America/Sao_Paulo',
+    'America/Campo_Grande',
+    'America/Cuiaba',
+    'America/Santarem',
+    'America/Porto_Velho',
+    'America/Boa_Vista',
+    'America/Manaus',
+    'America/Eirunepe',
+    'America/Rio_Branco',
+    'America/Nassau',
+    'Asia/Thimphu',
+    'Europe/Minsk',
+    'America/Belize',
+    'America/St_Johns',
+    'America/Halifax',
+    'America/Glace_Bay',
+    'America/Moncton',
+    'America/Goose_Bay',
+    'America/Blanc-Sablon',
+    'America/Toronto',
+    'America/Nipigon',
+    'America/Thunder_Bay',
+    'America/Iqaluit',
+    'America/Pangnirtung',
+    'America/Atikokan',
+    'America/Winnipeg',
+    'America/Rainy_River',
+    'America/Resolute',
+    'America/Rankin_Inlet',
+    'America/Regina',
+    'America/Swift_Current',
+    'America/Edmonton',
+    'America/Cambridge_Bay',
+    'America/Yellowknife',
+    'America/Inuvik',
+    'America/Creston',
+    'America/Dawson_Creek',
+    'America/Fort_Nelson',
+    'America/Vancouver',
+    'America/Whitehorse',
+    'America/Dawson',
+    'Indian/Cocos',
+    'Europe/Zurich',
+    'Africa/Abidjan',
+    'Pacific/Rarotonga',
+    'America/Santiago',
+    'America/Punta_Arenas',
+    'Pacific/Easter',
+    'Asia/Shanghai',
+    'Asia/Urumqi',
+    'America/Bogota',
+    'America/Costa_Rica',
+    'America/Havana',
+    'Atlantic/Cape_Verde',
+    'America/Curacao',
+    'Indian/Christmas',
+    'Asia/Nicosia',
+    'Asia/Famagusta',
+    'Europe/Prague',
+    'Europe/Berlin',
+    'Europe/Copenhagen',
+    'America/Santo_Domingo',
+    'Africa/Algiers',
+    'America/Guayaquil',
+    'Pacific/Galapagos',
+    'Europe/Tallinn',
+    'Africa/Cairo',
+    'Africa/El_Aaiun',
+    'Europe/Madrid',
+    'Africa/Ceuta',
+    'Atlantic/Canary',
+    'Europe/Helsinki',
+    'Pacific/Fiji',
+    'Atlantic/Stanley',
+    'Pacific/Chuuk',
+    'Pacific/Pohnpei',
+    'Pacific/Kosrae',
+    'Atlantic/Faroe',
+    'Europe/Paris',
+    'Europe/London',
+    'Asia/Tbilisi',
+    'America/Cayenne',
+    'Africa/Accra',
+    'Europe/Gibraltar',
+    'America/Godthab',
+    'America/Danmarkshavn',
+    'America/Scoresbysund',
+    'America/Thule',
+    'Europe/Athens',
+    'Atlantic/South_Georgia',
+    'America/Guatemala',
+    'Pacific/Guam',
+    'Africa/Bissau',
+    'America/Guyana',
+    'Asia/Hong_Kong',
+    'America/Tegucigalpa',
+    'America/Port-au-Prince',
+    'Europe/Budapest',
+    'Asia/Jakarta',
+    'Asia/Pontianak',
+    'Asia/Makassar',
+    'Asia/Jayapura',
+    'Europe/Dublin',
+    'Asia/Jerusalem',
+    'Asia/Kolkata',
+    'Indian/Chagos',
+    'Asia/Baghdad',
+    'Asia/Tehran',
+    'Atlantic/Reykjavik',
+    'Europe/Rome',
+    'America/Jamaica',
+    'Asia/Amman',
+    'Asia/Tokyo',
+    'Africa/Nairobi',
+    'Asia/Bishkek',
+    'Pacific/Tarawa',
+    'Pacific/Enderbury',
+    'Pacific/Kiritimati',
+    'Asia/Pyongyang',
+    'Asia/Seoul',
+    'Asia/Almaty',
+    'Asia/Qyzylorda',
+    'Asia/Qostanay', // https://bugs.chromium.org/p/chromium/issues/detail?id=928068
+    'Asia/Aqtobe',
+    'Asia/Aqtau',
+    'Asia/Atyrau',
+    'Asia/Oral',
+    'Asia/Beirut',
+    'Asia/Colombo',
+    'Africa/Monrovia',
+    'Europe/Vilnius',
+    'Europe/Luxembourg',
+    'Europe/Riga',
+    'Africa/Tripoli',
+    'Africa/Casablanca',
+    'Europe/Monaco',
+    'Europe/Chisinau',
+    'Pacific/Majuro',
+    'Pacific/Kwajalein',
+    'Asia/Yangon',
+    'Asia/Ulaanbaatar',
+    'Asia/Hovd',
+    'Asia/Choibalsan',
+    'Asia/Macau',
+    'America/Martinique',
+    'Europe/Malta',
+    'Indian/Mauritius',
+    'Indian/Maldives',
+    'America/Mexico_City',
+    'America/Cancun',
+    'America/Merida',
+    'America/Monterrey',
+    'America/Matamoros',
+    'America/Mazatlan',
+    'America/Chihuahua',
+    'America/Ojinaga',
+    'America/Hermosillo',
+    'America/Tijuana',
+    'America/Bahia_Banderas',
+    'Asia/Kuala_Lumpur',
+    'Asia/Kuching',
+    'Africa/Maputo',
+    'Africa/Windhoek',
+    'Pacific/Noumea',
+    'Pacific/Norfolk',
+    'Africa/Lagos',
+    'America/Managua',
+    'Europe/Amsterdam',
+    'Europe/Oslo',
+    'Asia/Kathmandu',
+    'Pacific/Nauru',
+    'Pacific/Niue',
+    'Pacific/Auckland',
+    'Pacific/Chatham',
+    'America/Panama',
+    'America/Lima',
+    'Pacific/Tahiti',
+    'Pacific/Marquesas',
+    'Pacific/Gambier',
+    'Pacific/Port_Moresby',
+    'Pacific/Bougainville',
+    'Asia/Manila',
+    'Asia/Karachi',
+    'Europe/Warsaw',
+    'America/Miquelon',
+    'Pacific/Pitcairn',
+    'America/Puerto_Rico',
+    'Asia/Gaza',
+    'Asia/Hebron',
+    'Europe/Lisbon',
+    'Atlantic/Madeira',
+    'Atlantic/Azores',
+    'Pacific/Palau',
+    'America/Asuncion',
+    'Asia/Qatar',
+    'Indian/Reunion',
+    'Europe/Bucharest',
+    'Europe/Belgrade',
+    'Europe/Kaliningrad',
+    'Europe/Moscow',
+    'Europe/Simferopol',
+    'Europe/Kirov',
+    'Europe/Astrakhan',
+    'Europe/Volgograd',
+    'Europe/Saratov',
+    'Europe/Ulyanovsk',
+    'Europe/Samara',
+    'Asia/Yekaterinburg',
+    'Asia/Omsk',
+    'Asia/Novosibirsk',
+    'Asia/Barnaul',
+    'Asia/Tomsk',
+    'Asia/Novokuznetsk',
+    'Asia/Krasnoyarsk',
+    'Asia/Irkutsk',
+    'Asia/Chita',
+    'Asia/Yakutsk',
+    'Asia/Khandyga',
+    'Asia/Vladivostok',
+    'Asia/Ust-Nera',
+    'Asia/Magadan',
+    'Asia/Sakhalin',
+    'Asia/Srednekolymsk',
+    'Asia/Kamchatka',
+    'Asia/Anadyr',
+    'Asia/Riyadh',
+    'Pacific/Guadalcanal',
+    'Indian/Mahe',
+    'Africa/Khartoum',
+    'Europe/Stockholm',
+    'Asia/Singapore',
+    'America/Paramaribo',
+    'Africa/Juba',
+    'Africa/Sao_Tome',
+    'America/El_Salvador',
+    'Asia/Damascus',
+    'America/Grand_Turk',
+    'Africa/Ndjamena',
+    'Indian/Kerguelen',
+    'Asia/Bangkok',
+    'Asia/Dushanbe',
+    'Pacific/Fakaofo',
+    'Asia/Dili',
+    'Asia/Ashgabat',
+    'Africa/Tunis',
+    'Pacific/Tongatapu',
+    'Europe/Istanbul',
+    'America/Port_of_Spain',
+    'Pacific/Funafuti',
+    'Asia/Taipei',
+    'Europe/Kiev',
+    'Europe/Uzhgorod',
+    'Europe/Zaporozhye',
+    'Pacific/Wake',
+    'America/New_York',
+    'America/Detroit',
+    'America/Kentucky/Louisville',
+    'America/Kentucky/Monticello',
+    'America/Indiana/Indianapolis',
+    'America/Indiana/Vincennes',
+    'America/Indiana/Winamac',
+    'America/Indiana/Marengo',
+    'America/Indiana/Petersburg',
+    'America/Indiana/Vevay',
+    'America/Chicago',
+    'America/Indiana/Tell_City',
+    'America/Indiana/Knox',
+    'America/Menominee',
+    'America/North_Dakota/Center',
+    'America/North_Dakota/New_Salem',
+    'America/North_Dakota/Beulah',
+    'America/Denver',
+    'America/Boise',
+    'America/Phoenix',
+    'America/Los_Angeles',
+    'America/Anchorage',
+    'America/Juneau',
+    'America/Sitka',
+    'America/Metlakatla',
+    'America/Yakutat',
+    'America/Nome',
+    'America/Adak',
+    'Pacific/Honolulu',
+    'America/Montevideo',
+    'Asia/Samarkand',
+    'Asia/Tashkent',
+    'America/Caracas',
+    'Asia/Ho_Chi_Minh',
+    'Pacific/Efate',
+    'Pacific/Wallis',
+    'Pacific/Apia',
+    'Africa/Johannesburg'
+  ];
+
+</script>
+<span id="timezoneselector"></span></span>
+    <h2 class="left-h">Tuesday, October 26, 2021</h2>
+    <table class="table table-spread" style="padding-left:auto;">
+      <tr class="success">
+        <td>
+          <strong>Opening Remarks and Best Paper Awards</strong>
+          <span class="pull-right">
+            <b>Mirror 1</b> <i class="adjustabletime" begin="1635260400000" end="1635262200000">08:00 - 08:30 (UTC-07:00)</i><br/>
+            <b>Mirror 2</b> <i class="adjustabletime" begin="1635292800000" end="1635294600000">17:00 - 17:30 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr><td></td></tr>
+
+      
+
+<tr class="info">
+  <td>
+    <strong>Session 1: Byzantine fault-tolerance <!--()--></strong>
+    <ul>
+      <li style="padding-left: 20px"><i>Dejan Kostić (KTH Royal Institute of Technology)</i><span class="pull-right" style="text-align: right"><b>Mirror 1</b> <i class="adjustabletime" begin="1635262200000" end="1635265800000">08:30 - 09:30 (UTC-07:00)</i></span></li>
+      <li style="padding-left: 20px"><i>Malte Schwarzkopf (Brown University)</i><span class="pull-right" style="text-align: right"><b>Mirror 2</b> <i class="adjustabletime" begin="1635294600000" end="1635298200000">17:30 - 18:30 (UTC-07:00)</i></span></li>
+    </ul>
+  </td>
+</tr>
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635262200000"></span> and <span class="presentationtime" time="1635294600000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483552"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/RKZvsW-p4P0"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span > • <a href="https://youtu.be/mPNWKG7BUoM"><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483552">Basil: Breaking up BFT with ACID (transactions)</a></strong>
+</td></tr>
+<tr><td>Florian Suri-Payer (Cornell University), Matthew Burke (Cornell University), Yunhao Zhang (Cornell University), Zheng Wang (Cornell University), Lorenzo Alvisi (Cornell University), Natacha Crooks (UC Berkeley)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635263400000"></span> and <span class="presentationtime" time="1635295800000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483574"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/y44C_Hl_dQs"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483574">BIDL: A High-throughput, Low-latency Permissioned Blockchain Framework for Datacenter Networks</a></strong>
+</td></tr>
+<tr><td>Ji Qi (The University of Hong Kong), Xusheng Chen (The University of Hong Kong), Yunpeng Jiang (The University of Hong Kong), Jianyu Jiang (The University of Hong Kong), Tianxiang Shen (The University of Hong Kong), Shixiong Zhao (The University of Hong Kong), Sen Wang (Huawei Technologies Co., Ltd.), Gong Zhang (Huawei Technologies Co., Ltd.), Li Chen (Huawei Technologies Co., Ltd.), Man Ho Au (The University of Hong Kong), Heming Cui (The University of Hong Kong)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635264600000"></span> and <span class="presentationtime" time="1635297000000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483584"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/pWiUAgTxHCM"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span > • <a href="https://youtu.be/ZXZDoWBWHSU"><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483584">Kauri: Scalable BFT Consensus with Pipelined Tree-Based Dissemination and Aggregation</a></strong>
+</td></tr>
+<tr><td>Ray Neiheiser (INESC-ID, IST, U. Lisboa and UFSC/DAS), Miguel Matos (INESC-ID, IST, U. Lisboa), Luís Rodrigues (INESC-ID, IST, U. Lisboa)</td></tr>
+
+
+
+
+
+
+
+
+
+      <tr class="success"><td><strong>Break</strong></td></tr><tr><td></td></tr>
+
+
+      
+
+<tr class="info">
+  <td>
+    <strong>Session 2: Finding bugs <!--()--></strong>
+    <ul>
+      <li style="padding-left: 20px"><i>Chris Rossbach (UT Austin and VMware Research)</i><span class="pull-right" style="text-align: right"><b>Mirror 1</b> <i class="adjustabletime" begin="1635266700000" end="1635270300000">09:45 - 10:45 (UTC-07:00)</i></span></li>
+      <li style="padding-left: 20px"><i>Ding Yuan (University of Toronto)</i><span class="pull-right" style="text-align: right"><b>Mirror 2</b> <i class="adjustabletime" begin="1635299100000" end="1635302700000">18:45 - 19:45 (UTC-07:00)</i></span></li>
+    </ul>
+  </td>
+</tr>
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635266700000"></span> and <span class="presentationtime" time="1635299100000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483545"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/Dm2IMyNFhvE"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span > • <a href="https://youtu.be/OQC0rL1xge0"><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483545">iGUARD: In-GPU Advanced Race Detection</a></strong>
+</td></tr>
+<tr><td>Aditya K Kamath (Indian Institute of Science), Arkaprava Basu (Indian Institute of Science)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635267900000"></span> and <span class="presentationtime" time="1635300300000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483549"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/mFbQuLgE8AY"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483549">Snowboard: Finding Kernel Concurrency Bugs through Systematic Inter-thread Communication Analysis</a></strong>
+</td></tr>
+<tr><td>Sishuai Gong (Purdue University), Deniz Altınbüken (Google Research), Pedro Fonseca (Purdue University), Petros Maniatis (Google Research)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635269100000"></span> and <span class="presentationtime" time="1635301500000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483570"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/7pI9GfYEu-s"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span > • <a href="https://youtu.be/Hfl6EQquUU0"><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483570">Rudra: Finding Memory Safety Bugs in Rust at the Ecosystem Scale</a></strong>
+</td></tr>
+<tr><td>Yechan Bae (Georgia Institute of Technology), Youngsuk Kim (Georgia Institute of Technology), Ammar Askar (Georgia Institute of Technology), Jungwon Lim (Georgia Institute of Technology), Taesoo Kim (Georgia Institute of Technology)</td></tr>
+
+
+
+
+
+
+
+
+
+      <tr class="success"><td><strong>Break</strong></td></tr><tr><td></td></tr>
+
+
+      
+
+<tr class="info">
+  <td>
+    <strong>Session 3: Consistency <!--()--></strong>
+    <ul>
+      <li style="padding-left: 20px"><i>Jinyang Li (New York University)</i><span class="pull-right" style="text-align: right"><b>Mirror 1</b> <i class="adjustabletime" begin="1635271200000" end="1635274800000">11:00 - 12:00 (UTC-07:00)</i></span></li>
+      <li style="padding-left: 20px"><i>Lidong Zhou (Microsoft Research Asia)</i><span class="pull-right" style="text-align: right"><b>Mirror 2</b> <i class="adjustabletime" begin="1635303600000" end="1635307200000">20:00 - 21:00 (UTC-07:00)</i></span></li>
+    </ul>
+  </td>
+</tr>
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635271200000"></span> and <span class="presentationtime" time="1635303600000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483556"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/MSNaEfTDxjY"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span > • <a href="https://youtu.be/rYmv0t1CVrA"><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483556">Witcher: Systematic Crash Consistency Testing for Non-Volatile Memory Key-Value Stores</a></strong>
+</td></tr>
+<tr><td>Xinwei Fu (Virginia Tech), Wook-Hee Kim (Virginia Tech), Ajay Paddayuru Shreepathi (Stony Brook University), Mohannad Ismail (Virginia Tech), Sunny Wadkar (Virginia Tech), Dongyoon Lee (Stony Brook University), Changwoo Min (Virginia Tech)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635272400000"></span> and <span class="presentationtime" time="1635304800000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483577"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/29-isLcDtL0"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483577">Understanding and Detecting Software Upgrade Failures in Distributed Systems</a></strong>
+</td></tr>
+<tr><td>Yongle Zhang (Purdue University), Junwen Yang (University of Chicago), Zhuqi Jin (University of Toronto), Utsav Sethi (University of Chicago), Kirk Rodrigues (University of Toronto), Shan Lu (University of Chicago), Ding Yuan (University of Toronto)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635273600000"></span> and <span class="presentationtime" time="1635306000000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483592"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/KGv50O3XK8g"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span > • <a href="https://youtu.be/F3UnKbTiits"><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483592">Crash Consistent Non-Volatile Memory Express</a></strong>
+</td></tr>
+<tr><td>Xiaojian Liao (Tsinghua University), Youyou Lu (Tsinghua University), Zhe Yang (Tsinghua University), Jiwu Shu (Tsinghua University)</td></tr>
+
+
+
+
+
+
+
+
+
+      <tr class="success"><td><strong>Break</strong></td></tr><tr><td></td></tr>
+
+
+      
+
+<tr class="info">
+  <td>
+    <strong>Session 4: Databases <!--()--></strong>
+    <ul>
+      <li style="padding-left: 20px"><i>Matei Zaharia (Stanford University)</i><span class="pull-right" style="text-align: right"><b>Mirror 1</b> <i class="adjustabletime" begin="1635275700000" end="1635279300000">12:15 - 13:15 (UTC-07:00)</i></span></li>
+      <li style="padding-left: 20px"><i>Natacha Crooks (UC Berkeley)</i><span class="pull-right" style="text-align: right"><b>Mirror 2</b> <i class="adjustabletime" begin="1635308100000" end="1635311700000">21:15 - 22:15 (UTC-07:00)</i></span></li>
+    </ul>
+  </td>
+</tr>
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635275700000"></span> and <span class="presentationtime" time="1635308100000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483551"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/_YmXL2gYzRI"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483551">Cuckoo Trie: Exploiting Memory-Level Parallelism for Efficient DRAM Indexing</a></strong>
+</td></tr>
+<tr><td>Adar Zeitak (Tel Aviv University), Adam Morrison (Tel Aviv University)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635276900000"></span> and <span class="presentationtime" time="1635309300000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483566"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/GauK7QhaAEQ"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483566">Regular Sequential Serializability and Regular Sequential Consistency</a></strong>
+</td></tr>
+<tr><td>Jeffrey Helt (Princeton University), Matthew Burke (Cornell University), Amit Levy (Princeton University), Wyatt Lloyd (Princeton University)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635278100000"></span> and <span class="presentationtime" time="1635310500000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483591"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/QZ8sMvck654"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span > • <a href="https://youtu.be/NUWl4dSfA1c"><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483591">Caracal: Contention Management with Deterministic Concurrency Control</a></strong>
+</td></tr>
+<tr><td>Dai Qin (University of Toronto), Angela Demke Brown (University of Toronto), Ashvin Goel (University of Toronto)</td></tr>
+
+
+
+
+
+
+
+
+
+      <tr class="success"><td><strong>Break</strong></td></tr><tr><td></td></tr>
+
+      <tr class="success"><td>
+          <strong>Poster Session</strong><br/>
+          The poster session will happen in Gather.town -- see <a href="https://www.youtube.com/watch?v=4VDd3zar_cc">this 2 minute video</a> for a quick overview.
+          <span class="pull-right">
+            <b>Mirror 1</b> <i class="adjustabletime" begin="1635280200000" end="1635283800000">13:30 - 14:30 (UTC-07:00)</i><br/>
+            <b>Mirror 2</b> <i class="adjustabletime" begin="1635312600000" end="1635316200000">22:30 - 23:30 (UTC-07:00)</i>
+          </span>
+      </td></tr>
+      <tr><td></td></tr>
+
+      <tr class="success">
+        <td>
+          <strong>"Ask Me Anything" (Mirror 1)</strong><br/>
+          <i>Additional AMA information can be found <a href="ama.html">here</a>.</i>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          Shan Lu (University of Chicago), <i>Moderator: Abutalib Aghayev (Pennsylvania State University)</i>
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635283800000" end="1635285600000">14:30 - 15:00 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          Jason Nieh (Columbia University), <i>Moderator: Sudarsun Kannan (Rutgers University - New Brunswick)</i>
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635285600000" end="1635287400000">15:00 - 15:30 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          Michael M. Swift (University of Wisconsin - Madison), <i>Moderator: Aastha Mehta (University of British Columbia)</i>
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635287400000" end="1635289200000">15:30 - 16:00 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          Jason Flinn (Facebook), <i>Moderator: Adriana Szekeres (VMware Research)</i>
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635289200000" end="1635291000000">16:00 - 16:30 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr class="success">
+        <td style="padding-top: 20px">
+          <strong>Meet the Sponsors (Mirror 1)</strong><br/>
+          <i>Additional sponsor information can be found <a href="sponsor_sessions.html">here</a>.</i>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          <b>Google</b> • See the <b>#sponsors-google</b> channel on Slack for more information, or the <a href="flyers/google.pdf">Google Flyer</a>.
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635283800000" end="1635285600000">14:30 - 15:00 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          <b>Twitter</b> • See the <b>#sponsors-twitter</b> channel on Slack for more information, or the <a href="flyers/twitter.pdf">Twitter Flyer</a>.
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635285600000" end="1635287400000">15:00 - 15:30 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          <b>Exotanium</b> • See the <b>#sponsors-exotanium</b> channel on Slack for more information, or the <a href="flyers/exotanium.pdf">Exotanium Flyer</a>.
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635289200000" end="1635291000000">16:00 - 16:30 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          <b>VMware</b> • See the <b>#sponsors-vmware</b> channel on Slack for more information.
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635291000000" end="1635292800000">16:30 - 17:00 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          <b>Amazon</b> • See the <b>#sponsors-amazon</b> channel on Slack for more information, or the <a href="flyers/amazon.pdf">Amazon Flyer</a>.
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635292800000" end="1635295500000">17:00 - 17:45 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr><td></td></tr>
+      
+      <tr class="success">
+        <td>
+          <strong>"Ask Me Anything" (Mirror 2)</strong><br/>
+          <i>Additional AMA information can be found <a href="ama.html">here</a>.</i>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          Zheng Zhang (AWS Shanghai AI Lab), <i>Moderator: Minjie Wang (AWS Shanghai AI Lab)</i>
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635316200000" end="1635318000000">23:30 - 00:00 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          Xiaosong Ma (Hamad Bin Khalifa University), <i>Moderator: Cheng Li (University of Science and Technology of China)</i>
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635318000000" end="1635319800000">00:00 - 00:30 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          Sorav Bansal (IIT Delhi), <i>Moderator: Arkaprava Basu (Indian Institute of Science)</i>
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635319800000" end="1635321600000">00:30 - 01:00 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          Chuanxiong Guo (Bytedance AI Lab), <i>Moderator: Xin Jin (Peking University)</i>
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635321600000" end="1635323400000">01:00 - 01:30 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr class="success">
+        <td style="padding-top: 20px">
+          <strong>Meet the Sponsors (Mirror 2)</strong><br/>
+          <i>Additional sponsor information can be found <a href="sponsor_sessions.html">here</a>.</i>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          <b>Huawei</b> • See the <b>#sponsors-huawei</b> channel on Slack for more information, or the <a href="flyers/huawei.pdf">Huawei Flyer</a>.
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635318000000" end="1635321600000">00:00 - 01:00 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr><td></td></tr>
+    </table>
+    <h2 class="left-h">Wednesday, October 27, 2021</h2>
+    <table class="table table-spread" style="padding-left:auto;">
+      <tr class="success">
+        <td>
+          <strong>Business Meeting</strong>
+          <span class="pull-right">
+            <b>Mirror 1</b> <i class="adjustabletime" begin="1635346800000" end="1635350400000">08:00 - 09:00 (UTC-07:00)</i><br/>
+            <b>Mirror 2</b> <i class="adjustabletime" begin="1635379200000" end="1635382800000">17:00 - 18:00 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr><td></td></tr>
+
+      
+
+<tr class="info">
+  <td>
+    <strong>Session 5: Performance in the data center <!--()--></strong>
+    <ul>
+      <li style="padding-left: 20px"><i>Manya Ghobadi (MIT)</i><span class="pull-right" style="text-align: right"><b>Mirror 1</b> <i class="adjustabletime" begin="1635351300000" end="1635354900000">09:15 - 10:15 (UTC-07:00)</i></span></li>
+      <li style="padding-left: 20px"><i>Jeff Mogul (Google)</i><span class="pull-right" style="text-align: right"><b>Mirror 2</b> <i class="adjustabletime" begin="1635383700000" end="1635387300000">18:15 - 19:15 (UTC-07:00)</i></span></li>
+    </ul>
+  </td>
+</tr>
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635351300000"></span> and <span class="presentationtime" time="1635383700000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483569"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/DXnFrEBtYVk"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483569">The Demikernel Datapath OS Architecture for Microsecond-scale Datacenter Systems</a></strong>
+</td></tr>
+<tr><td>Irene Zhang (Microsoft Research/University of Washington), Amanda Raybuck (University of Texas at Austin), Pratyush Patel (University of Washington), Kirk Olynyk (Microsoft Research), Jacob Nelson (Microsoft Research), Omar S. Navarro Leija (University of Pennsylvania), Ashlie Martinez (University of Washinton), Jing Liu (University of Wisconsin, Madison), Anna Kornfeld Simpson (University of Washington), Sujay Jayakar (Microsoft Research), Pedro Henrique Penna (Microsoft Research), Max Demoulin (University of Pennsylvania), Piali Choudhury (Microsoft Research), Anirudh Badam (Microsoft)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635352500000"></span> and <span class="presentationtime" time="1635384900000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483576"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/PdCFGrxi5kE"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span > • <a href="https://youtu.be/HvlKTbJq41s"><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483576">Birds of a Feather Flock Together : Scaling RDMA RPCs with FLOCK</a></strong>
+</td></tr>
+<tr><td>Sumit Kumar Monga (Virginia Tech), Sanidhya Kashyap (EPFL), Changwoo Min (Virginia Tech)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635353700000"></span> and <span class="presentationtime" time="1635386100000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483587"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/yZDw9uBMHxI"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483587">PRISM: Rethinking the RDMA Interface for Distributed Systems</a></strong>
+</td></tr>
+<tr><td>Matthew Burke (Cornell University), Sowmya Dharanipragada (Cornell University), Shannon Joyner (Cornell University), Adriana Szekeres (VMware Research), Jacob Nelson (Microsoft Research), Irene Zhang (Microsoft Research), Dan R. K. Ports (Microsoft Research)</td></tr>
+
+
+
+
+
+
+
+
+
+      <tr class="success"><td><strong>Break</strong></td></tr><tr><td></td></tr>
+
+
+      
+
+<tr class="info">
+  <td>
+    <strong>Session 6: Flash storage <!--()--></strong>
+    <ul>
+      <li style="padding-left: 20px"><i>Oana Balmau (McGill University)</i><span class="pull-right" style="text-align: right"><b>Mirror 1</b> <i class="adjustabletime" begin="1635355800000" end="1635359400000">10:30 - 11:30 (UTC-07:00)</i></span></li>
+      <li style="padding-left: 20px"><i>Kang Chen (Tsinghua University)</i><span class="pull-right" style="text-align: right"><b>Mirror 2</b> <i class="adjustabletime" begin="1635388200000" end="1635391800000">19:30 - 20:30 (UTC-07:00)</i></span></li>
+    </ul>
+  </td>
+</tr>
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635355800000"></span> and <span class="presentationtime" time="1635388200000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483568"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/d1dFmF3IJOI"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span > • <a href="https://youtu.be/bJ4rqSrcVqs"><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483568">Kangaroo: Caching Billions of Tiny Objects on Flash</a></strong>
+</td></tr>
+<tr><td>Sara McAllister (Carnegie Mellon University), Benjamin Berg (Carnegie Mellon University), Julian Tutuncu-Macias (Carnegie Mellon University), Juncheng Yang (Carnegie Mellon University), Sathya Gunasekar (Facebook), Jimmy Lu (Facebook), Daniel Berger (University of Washington/ Microsoft Research), Nathan Beckmann (Carnegie Mellon University), Gregory R. Ganger (Carnegie Mellon University)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635357000000"></span> and <span class="presentationtime" time="1635389400000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483573"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/it_A3rpa9MQ"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span > • <a href="https://youtu.be/Scv2M8QIZqE"><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483573">IODA: A Host/Device Co-Design for Strong Predictability Contract on Modern Flash Storage</a></strong>
+</td></tr>
+<tr><td>Huaicheng Li (University of Chicago and Carnegie Mellon University), Martin L. Putra (University of Chicago), Ronald Shi (University of Chicago), Xing Lin (NetApp), Gregory R. Ganger (Carnegie Mellon University), Haryadi S. Gunawi (University of Chicago)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635358200000"></span> and <span class="presentationtime" time="1635390600000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483593"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/QOFTKDiarXc"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span > • <a href="https://youtu.be/m7f8I1VoHE4"><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483593">FragPicker: A New Defragmentation Tool for Modern Storage Devices</a></strong>
+</td></tr>
+<tr><td>Jonggyu Park (Sungkyunkwan University), Young Ik Eom (Dept. of Electrical and Computer Engineering/College of Computing and Informatics, Sungkyunkwan University)</td></tr>
+
+
+
+
+
+
+
+
+
+      <tr class="success"><td><strong>Break</strong></td></tr><tr><td></td></tr>
+
+
+      
+
+<tr class="info">
+  <td>
+    <strong>Session 7: Graphs <!--()--></strong>
+    <ul>
+      <li style="padding-left: 20px"><i>Amit Levy (Princeton University)</i><span class="pull-right" style="text-align: right"><b>Mirror 1</b> <i class="adjustabletime" begin="1635360300000" end="1635363900000">11:45 - 12:45 (UTC-07:00)</i></span></li>
+      <li style="padding-left: 20px"><i>Matei Zaharia (Stanford University)</i><span class="pull-right" style="text-align: right"><b>Mirror 2</b> <i class="adjustabletime" begin="1635392700000" end="1635396300000">20:45 - 21:45 (UTC-07:00)</i></span></li>
+    </ul>
+  </td>
+</tr>
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635360300000"></span> and <span class="presentationtime" time="1635392700000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483559"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/gz6QDQlRTvY"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483559">dSpace: Composable Abstractions for Smart Spaces</a></strong>
+</td></tr>
+<tr><td>Silvery Fu (UC Berkeley), Sylvia Ratnasamy (UC Berkeley)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635361500000"></span> and <span class="presentationtime" time="1635393900000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483575"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/JGqoww5DSRg"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span > • <a href="https://youtu.be/7Gt7VY9RN5Q"><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483575">Random Walks on Huge Graphs at Cache Efficiency</a></strong>
+</td></tr>
+<tr><td>Ke Yang (Tsinghua Unversity &amp; Qatar Computing Research Institute, HBKU &amp; Beijing HaiZhi XingTu Technology Co., Ltd.), Xiaosong Ma (Qatar Computing Research Institute, HBKU), Saravanan Thirumuruganathan (Qatar Computing Research Institute, HBKU), Kang Chen (Tsinghua University &amp; Beijing HaiZhi XingTu Technology Co., Ltd.), Yongwei Wu (Tsinghua University &amp; Beijing HaiZhi XingTu Technology Co., Ltd.)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635362700000"></span> and <span class="presentationtime" time="1635395100000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483585"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/rHH1Utp3wco"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483585">Mycelium: Large-Scale Distributed Graph Queries with Differential Privacy</a></strong>
+</td></tr>
+<tr><td>Edo Roth (University of Pennsylvania), Karan Newatia (University of Pennsylvania), Yiping Ma (University of Pennsylvania), Ke Zhong (University of Pennsylvania), Sebastian Angel (University of Pennsylvania), Andreas Haeberlen (University of Pennsylvania)</td></tr>
+
+
+
+
+
+
+
+
+
+      <tr class="success"><td><strong>Break</strong></td></tr><tr><td></td></tr>
+
+
+      
+
+<tr class="info">
+  <td>
+    <strong>Session 8: Learning <!--()--></strong>
+    <ul>
+      <li style="padding-left: 20px"><i>Minlan Yu (Harvard University)</i><span class="pull-right" style="text-align: right"><b>Mirror 1</b> <i class="adjustabletime" begin="1635364800000" end="1635368400000">13:00 - 14:00 (UTC-07:00)</i></span></li>
+      <li style="padding-left: 20px"><i>Byung-Gon Chun (Seoul National University)</i><span class="pull-right" style="text-align: right"><b>Mirror 2</b> <i class="adjustabletime" begin="1635397200000" end="1635400800000">22:00 - 23:00 (UTC-07:00)</i></span></li>
+    </ul>
+  </td>
+</tr>
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635364800000"></span> and <span class="presentationtime" time="1635397200000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483547"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/2jZkBxNrIGg"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483547">HEALER: Relation Learning Guided Kernel Fuzzing</a></strong>
+</td></tr>
+<tr><td>Hao Sun (School of Software, Tsinghua University, KLISS, BNRist, China), Yu Heng Shen (School of Software, Tsinghua University, KLISS, BNRist, China), Cong Wang (School of Software, Tsinghua University, KLISS, BNRist, China), Jianzhong Liu (School of Software, Tsinghua University, KLISS, BNRist, China), Yu Jiang (School of Software, Tsinghua University, KLISS, BNRist, China), Ting Chen (Center for Cybersecurity, University of Electronic Science and Technology of China, China), Aiguo Cui (Huawei Technologies Co Ltd, China)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635366000000"></span> and <span class="presentationtime" time="1635398400000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483553"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/xFSeIdO_gYg"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483553">Gradient Compression Supercharged High-Performance Data Parallel DNN Training</a></strong>
+</td></tr>
+<tr><td>Youhui Bai (University of Science and Technology of China), Cheng Li (University of Science and Technology of China), Quan Zhou (University of Science and Technology of China), Jun Yi (University of Nevada at Reno), Ping Gong (University of Science and Technology of China), Feng Yan (University of Nevada at Reno), Ruichuan Chen (Nokia Bell Labs), Yinlong Xu (University of Science and Technology of China)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635367200000"></span> and <span class="presentationtime" time="1635399600000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483590"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/7EPQhWbKXa0"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483590">Generating Complex, Realistic Cloud Workloads using Recurrent Neural Networks</a></strong>
+</td></tr>
+<tr><td>Shane Bergsma (Huawei Canada Research Center), Timothy Zeyl (Huawei Canada Research Center), Arik Senderovich (University of Toronto), J. Christopher Beck (University of Toronto)</td></tr>
+
+
+
+
+
+
+
+
+
+      <tr class="success"><td><strong>Break</strong></td></tr><tr><td></td></tr>
+
+
+      
+
+<tr class="info">
+  <td>
+    <strong>Session 9: Non-volatile memory <!--()--></strong>
+    <ul>
+      <li style="padding-left: 20px"><i>Steven Hand (Google)</i><span class="pull-right" style="text-align: right"><b>Mirror 1</b> <i class="adjustabletime" begin="1635369300000" end="1635372900000">14:15 - 15:15 (UTC-07:00)</i></span></li>
+      <li style="padding-left: 20px"><i>Ana Klimovic (ETH Zurich)</i><span class="pull-right" style="text-align: right"><b>Mirror 2</b> <i class="adjustabletime" begin="1635401700000" end="1635405300000">23:15 - 00:15 (UTC-07:00)</i></span></li>
+    </ul>
+  </td>
+</tr>
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635369300000"></span> and <span class="presentationtime" time="1635401700000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483550"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/JL2Takrgu78"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483550">HeMem: Scalable Tiered Memory Management for Big Data Applications and Real NVM</a></strong>
+</td></tr>
+<tr><td>Amanda Raybuck (University of Texas at Austin), Tim Stamler (University of Texas at Austin), Wei Zhang (Microsoft), Mattan Erez (University of Texas at Austin), Simon Peter (University of Texas at Austin)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635370500000"></span> and <span class="presentationtime" time="1635402900000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483579"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/6RcV9PSsub8"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483579">J-NVM: Off-heap Persistent Objects in Java</a></strong>
+</td></tr>
+<tr><td>Anatole Lefort (Télécom SudParis - Institut Polytechnique de Paris), Yohan Pipereau (Télécom SudParis - Institut Polytechnique de Paris), Kwabena Amponsem Boateng (Télécom SudParis - Institut Polytechnique de Paris), Pierre Sutra (Télécom SudParis - Institut Polytechnique de Paris), Gaël Thomas (Télécom SudParis - Institut Polytechnique de Paris)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635371700000"></span> and <span class="presentationtime" time="1635404100000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483589"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/1c065vIXXjQ"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span > • <a href="https://youtu.be/7Gt7VY9RN5Q"><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483589">PACTree: A High Performance Persistent Range Index Using PAC Guidelines</a></strong>
+</td></tr>
+<tr><td>Wook-Hee Kim (Virginia Tech), R. Madhava Krishnan (Virginia Tech), Xinwei Fu (Virginia Tech), Sanidhya Kashyap (EPFL), Changwoo Min (Virginia Tech)</td></tr>
+
+
+
+
+
+
+
+
+
+      <tr><td></td></tr>
+
+
+      <tr class="success">
+        <td>
+          <strong>"Ask Me Anything" (Mirror 1)</strong><br/>
+          <i>Additional AMA information can be found <a href="ama.html">here</a>.</i>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          Ada Gavrilovska (Georgia Institute of Technology), <i>Moderator: Neeraja Yadwadkar (University of Texas at Austin and VMware Research)</i>
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635372900000" end="1635374700000">15:15 - 15:45 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          Ion Stoica (University of California, Berkeley), <i>Moderator: Andrew R. Quinn (University of California, Santa Cruz)</i>
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635374700000" end="1635376500000">15:45 - 16:15 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          Jon Howell (VMware Research), <i>Moderator: Kai Mast (University of Wisconsin - Madison)</i>
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635376500000" end="1635378300000">16:15 - 16:45 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr class="success">
+        <td style="padding-top: 20px">
+          <strong>Meet the Sponsors (Mirror 1)</strong><br/>
+          <i>Additional sponsor information can be found <a href="sponsor_sessions.html">here</a>.</i>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          <b>Ant Group</b> • See the <b>#sponsors-antgroup</b> channel on Slack for more information, or the <a href="flyers/ant.pdf">Ant Group Flyer</a>.
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635373800000" end="1635375600000">
+              15:30 - 16:00 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          <b>Akamai</b> •  See the <b>#sponsors-akamai</b> channel on Slack for more information, or the <a href="flyers/akamai.pdf">Akamai Flyer</a>.
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635375600000" end="1635377400000">16:00 - 16:30 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          <b>Microsoft</b> • See the <b>#sponsors-microsoft</b> channel on Slack for more information, or the <a href="flyers/microsoft.pdf">Microsoft Flyer</a>.
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635378300000" end="1635381000000">16:45 - 17:30 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr><td></td></tr>
+
+      <tr class="success">
+        <td>
+          <strong>"Ask Me Anything" (Mirror 2)</strong><br/>
+          <i>Additional AMA information can be found <a href="ama.html">here</a>.</i>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          Lidong Zhou (Microsoft Research Asia), <i>Moderator: Zhi Yang (Peking University)</i>
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635407100000" end="1635408900000">00:45 - 01:15 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          Haibo Chen (Shanghai Jiao Tong University), <i>Moderator: Yanyan Jiang (Nanjing University)</i>
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635408900000" end="1635410700000">01:15 - 01:45 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr><td></td></tr>
+
+    </table>
+    <h2 class="left-h">Thursday, October 28, 2021</h2>
+    <table class="table table-spread" style="padding-left:auto;">
+
+      
+
+<tr class="info">
+  <td>
+    <strong>Session 10: Replication <!--()--></strong>
+    <ul>
+      <li style="padding-left: 20px"><i>Fernando Pedone (University of Lugano)</i><span class="pull-right" style="text-align: right"><b>Mirror 1</b> <i class="adjustabletime" begin="1635433200000" end="1635436800000">08:00 - 09:00 (UTC-07:00)</i></span></li>
+      <li style="padding-left: 20px"><i>Jason Flinn (Facebook)</i><span class="pull-right" style="text-align: right"><b>Mirror 2</b> <i class="adjustabletime" begin="1635465600000" end="1635469200000">17:00 - 18:00 (UTC-07:00)</i></span></li>
+    </ul>
+  </td>
+</tr>
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635433200000"></span> and <span class="presentationtime" time="1635465600000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483543"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/vmZ9yMjElVs"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span > • <a href="https://youtu.be/uKiG903d5tI"><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483543">Exploiting Nil-Externality for Fast Replicated Storage</a></strong>
+</td></tr>
+<tr><td>Aishwarya Ganesan (VMware Research), Ramnatthan Alagappan (VMware Research), Andrea Arpaci-Dusseau (University of Wisconsin–Madison), Remzi Arpaci-Dusseau (University of Wisconsin–Madison)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635434400000"></span> and <span class="presentationtime" time="1635466800000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483558"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/-_4ohqtdyqU"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483558">Geometric Partitioning: Explore the Boundary of Optimal Erasure Code Repair</a></strong>
+</td></tr>
+<tr><td>Yingdi Shan (Tsinghua University), Kang Chen (Tsinghua University), Tuoyu Gong (Tsinghua University), Lidong Zhou (Microsoft Research), Tai Zhou (Alibaba Group), Yongwei Wu (Tsinghua University)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635435600000"></span> and <span class="presentationtime" time="1635468000000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483582"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/KUuB661hFIU"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483582">Rabia: Simplifying State-Machine Replication Through Randomization</a></strong>
+</td></tr>
+<tr><td>Haochen Pan (Boston College), Jesse Tuglu (Boston College), Neo Zhou (Boston College), Tianshu Wang (Boston College), Yicheng Shen (Boston College), Xiong Zheng (UT Austin), Joseph Tassarotti (Boston College), Lewis Tseng (Boston College), Roberto Palmieri (Lehigh University)</td></tr>
+
+
+
+
+
+
+
+
+
+      <tr class="success"><td><strong>Break</strong></td></tr><tr><td></td></tr>
+
+
+      
+
+<tr class="info">
+  <td>
+    <strong>Session 11: Resource allocation <!--()--></strong>
+    <ul>
+      <li style="padding-left: 20px"><i>Adam Belay (MIT)</i><span class="pull-right" style="text-align: right"><b>Mirror 1</b> <i class="adjustabletime" begin="1635437700000" end="1635441300000">09:15 - 10:15 (UTC-07:00)</i></span></li>
+      <li style="padding-left: 20px"><i>Ramakrishna Kotla (Amazon Web Services)</i><span class="pull-right" style="text-align: right"><b>Mirror 2</b> <i class="adjustabletime" begin="1635470100000" end="1635473700000">18:15 - 19:15 (UTC-07:00)</i></span></li>
+    </ul>
+  </td>
+</tr>
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635437700000"></span> and <span class="presentationtime" time="1635470100000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483561"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/LNkB9x4U1og"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483561">MIND: In-Network Memory Management for Disaggregated Data Centers</a></strong>
+</td></tr>
+<tr><td>Seung-seob Lee (Yale University), Yanpeng Yu (Yale University), Yupeng Tang (Yale University), Anurag Khandelwal (Yale University), Lin Zhong (Yale University), Abhishek Bhattacharjee (Yale University)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635438900000"></span> and <span class="presentationtime" time="1635471300000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483578"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/4wKKE9PIFA4"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483578">RAS: Continuously Optimized Region-Wide Datacenter Resource Allocation</a></strong>
+</td></tr>
+<tr><td>Andrew Newell (Facebook), Dimitrios Skarlatos (Facebook/Carnegie Mellon University), Jingyuan Fan (Facebook), Pavan Kumar (Facebook), Maxim Khutornenko (Facebook), Mayank Pundir (Facebook), Yirui Zhang (Facebook), Mingjun Zhang (Facebook), Yuanlai Liu (Facebook), Linh Le (Facebook), Brendon Daugherty (Facebook), Apurva Samudra (Facebook), Prashasti Baid (Facebook), James Kneeland (Facebook), Igor Kabiljo (Facebook), Dmitry Shchukin (Facebook), Andre Rodrigues (Facebook), Scott Michelson (Facebook), Ben Christensen (Facebook), Kaushik Veeraraghavan (Facebook), Chunqiang Tang (Facebook)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635440100000"></span> and <span class="presentationtime" time="1635472500000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483588"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/Oar16dzxH3E"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span > • <a href="https://youtu.be/AcuwQGX_UPs"><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483588">Solving Large-Scale Granular Resource Allocation Problems Efficiently with POP</a></strong>
+</td></tr>
+<tr><td>Deepak Narayanan (Stanford University), Fiodar Kazhamiaka (Stanford University), Firas Abuzaid (Stanford University), Peter Kraft (Stanford University), Akshay Agrawal (Stanford University), Srikanth Kandula (Microsoft Research), Stephen Boyd (Stanford University), Matei Zaharia (Stanford University and Databricks)</td></tr>
+
+
+
+
+
+
+
+
+
+      <tr class="success"><td><strong>Break</strong></td></tr><tr><td></td></tr>
+
+
+      
+
+<tr class="info">
+  <td>
+    <strong>Session 12: Scale <!--()--></strong>
+    <ul>
+      <li style="padding-left: 20px"><i>Bernard Wong (University of Waterloo)</i><span class="pull-right" style="text-align: right"><b>Mirror 1</b> <i class="adjustabletime" begin="1635442200000" end="1635445800000">10:30 - 11:30 (UTC-07:00)</i></span></li>
+      <li style="padding-left: 20px"><i>Irene Zhang (Microsoft Research Redmond)</i><span class="pull-right" style="text-align: right"><b>Mirror 2</b> <i class="adjustabletime" begin="1635474600000" end="1635478200000">19:30 - 20:30 (UTC-07:00)</i></span></li>
+    </ul>
+  </td>
+</tr>
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635442200000"></span> and <span class="presentationtime" time="1635474600000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483544"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/4EGArLVavbg"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483544">Log-structured Protocols in Delos</a></strong>
+</td></tr>
+<tr><td>Mahesh Balakrishnan (Facebook), Chen Shen (Facebook), Ahmed Jafri (Facebook), Suyog Mapara (Facebook), David Geraghty (Facebook), Jason Flinn (Facebook), Vidhya Venkat (Facebook), Ivailo Nedelchev (Facebook), Santosh Ghosh (Facebook), Mihir Dharamshi (Facebook), Jingming Liu (Facebook), Filip Gruszczynski (Facebook), Jun Li (Facebook), Rounak Tibrewal (Facebook), Ali Zaveri (Facebook), Rajeev Nagar (Facebook), Ahmed Yossef (Facebook), Francois Richard (Facebook), Yee Jiun Song (Facebook)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635443400000"></span> and <span class="presentationtime" time="1635475800000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483546"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/OMI52r-thFA"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483546">Shard Manager: A Generic Shard Management Framework for Geo-distributed Applications</a></strong>
+</td></tr>
+<tr><td>Sangmin Lee (Facebook), Zhenhua Guo (Facebook), Omer Sunercan (Facebook), Jun Ying (Facebook), Thawan Kooburat (Facebook), Suryadeep Biswal (Facebook), Jun Chen (Facebook), Kun Huang (Facebook), Yatpang Cheung (Facebook), Yiding Zhou (Facebook), Kaushik Veeraraghavan (Facebook), Biren Damani (Facebook), Pol Mauri Ruiz (Facebook), Vikas Mehta (Facebook), Chunqiang Tang (Facebook)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635444600000"></span> and <span class="presentationtime" time="1635477000000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483564"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/6mh5nZPSdhw"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483564">Forerunner: Constraint-based Speculative Transaction Execution for Ethereum</a></strong>
+</td></tr>
+<tr><td>Yang Chen (Microsoft Research), Zhongxin Guo (Microsoft Research), Runhuai Li (Zhejiang University and Microsoft Research), Shuo Chen (Microsoft Research), Lidong Zhou (Microsoft Research), Yajin Zhou (Zhejiang University), Xian Zhang (Microsoft Research)</td></tr>
+
+
+
+
+
+
+
+
+
+      <tr class="success"><td><strong>Break</strong></td></tr><tr><td></td></tr>
+
+
+      
+
+<tr class="info">
+  <td>
+    <strong>Session 13: Scheduling <!--()--></strong>
+    <ul>
+      <li style="padding-left: 20px"><i>Ryan Stutsman (University of Utah)</i><span class="pull-right" style="text-align: right"><b>Mirror 1</b> <i class="adjustabletime" begin="1635446700000" end="1635450300000">11:45 - 12:45 (UTC-07:00)</i></span></li>
+      <li style="padding-left: 20px"><i>Ranjita Bhagwan (Microsoft Research India)</i><span class="pull-right" style="text-align: right"><b>Mirror 2</b> <i class="adjustabletime" begin="1635479100000" end="1635482700000">20:45 - 21:45 (UTC-07:00)</i></span></li>
+    </ul>
+  </td>
+</tr>
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635446700000"></span> and <span class="presentationtime" time="1635479100000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483542"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/j4ABe4dsbIY"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483542">ghOSt: Fast &amp; Flexible User-Space Delegation of Linux Scheduling</a></strong>
+</td></tr>
+<tr><td>Jack Tigar Humphries (Google), Neel Natu (Google), Ashwin Chaugule (Google), Ofir Weisse (Google), Barret Rhoden (Google), Josh Don (Google), Luigi Rizzo (Google), Oleg Rombakh (Google), Paul Turner (Google), Christos Kozyrakis (Stanford University)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635447900000"></span> and <span class="presentationtime" time="1635480300000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483548"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/SYxYhf0mndk"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span > • <a href="https://youtu.be/v21FN6_uhv0"><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483548">Syrup: User-Defined Scheduling across the Stack</a></strong>
+</td></tr>
+<tr><td>Kostis Kaffes (Stanford University), Jack Tigar Humphries (Stanford University), David Mazières (Stanford University), Christos Kozyrakis (Stanford University)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635449100000"></span> and <span class="presentationtime" time="1635481500000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483571"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/ivJTugj5S0c"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483571">When Idling is Ideal: Optimizing Tail-Latency for Highly-Dispersed Datacenter Workloads with Perséphone</a></strong>
+</td></tr>
+<tr><td>Henri Maxime Demoulin (University of Pennsylvania), Joshua Fried (MIT CSAIL), Isaac Pedisich (Grammatech), Marios Kogias (Microsoft Research), Boon Thau Loo (University of Pennsylvania), Linh Thi Xuan Phan (University of Pennsylvania), Irene Zhang (Microsoft Research/University of Washington)</td></tr>
+
+
+
+
+
+
+
+
+
+      <tr class="success"><td><strong>Break</strong></td></tr><tr><td></td></tr>
+
+
+      
+
+<tr class="info">
+  <td>
+    <strong>Session 14: Security <!--()--></strong>
+    <ul>
+      <li style="padding-left: 20px"><i>Sebastian Angel (University of Pennsylvania)</i><span class="pull-right" style="text-align: right"><b>Mirror 1</b> <i class="adjustabletime" begin="1635451200000" end="1635454800000">13:00 - 14:00 (UTC-07:00)</i></span></li>
+      <li style="padding-left: 20px"><i>Cheng Li (USTC, China)</i><span class="pull-right" style="text-align: right"><b>Mirror 2</b> <i class="adjustabletime" begin="1635483600000" end="1635487200000">22:00 - 23:00 (UTC-07:00)</i></span></li>
+    </ul>
+  </td>
+</tr>
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635451200000"></span> and <span class="presentationtime" time="1635483600000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483554"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/Rxr_C9b64yU"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span > • <a href="https://youtu.be/wCrWM__I6g0"><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483554">TwinVisor: Hardware-isolated Confidential Virtual Machines for ARM</a></strong>
+</td></tr>
+<tr><td>Dingji Li (Institute of Parallel and Distributed Systems, Shanghai Jiao Tong University; Engineering Research Center for Domain-specific Operating Systems, Ministry of Education, China), Zeyu Mi (Institute of Parallel and Distributed Systems, Shanghai Jiao Tong University; Engineering Research Center for Domain-specific Operating Systems, Ministry of Education, China), Yubin Xia (Institute of Parallel and Distributed Systems, Shanghai Jiao Tong University; Engineering Research Center for Domain-specific Operating Systems, Ministry of Education, China), Binyu Zang (Institute of Parallel and Distributed Systems, Shanghai Jiao Tong University; Engineering Research Center for Domain-specific Operating Systems, Ministry of Education, China), Haibo Chen (Institute of Parallel and Distributed Systems, Shanghai Jiao Tong University; Engineering Research Center for Domain-specific Operating Systems, Ministry of Education, China), Haibing Guan (Shanghai Key Laboratory of Scalable Computing and Systems, Shanghai Jiao Tong University)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635452400000"></span> and <span class="presentationtime" time="1635484800000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483562"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/BTickyGZgKA"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span > • <a href="https://youtu.be/dz0TMm03UqA"><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483562">Snoopy: Surpassing the Scalability Bottleneck of Oblivious Storage</a></strong>
+</td></tr>
+<tr><td>Emma Dauterman (UC Berkeley), Vivian Fang (UC Berkeley), Ioannis Demertzis (UC Berkeley, UC Santa Cruz), Natacha Crooks (UC Berkeley), Raluca Ada Popa (UC Berkeley)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635453600000"></span> and <span class="presentationtime" time="1635486000000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483586"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/DLIv5ji-kOg"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483586">Coeus: A System for Oblivious Document Ranking and Retrieval</a></strong>
+</td></tr>
+<tr><td>Ishtiyaque Ahmad (University of California Santa Barbara), Laboni Sarker (University of California Santa Barbara), Divyakant Agrawal (University of California Santa Barbara), Amr El Abbadi (University of California Santa Barbara), Trinabh Gupta (University of California Santa Barbara)</td></tr>
+
+
+
+
+
+
+
+
+
+      <tr class="success"><td><strong>Break</strong></td></tr><tr><td></td></tr>
+
+      <tr class="success"><td>
+          <strong>Track A: Trivia</strong>
+          <span class="pull-right">
+            <b>Mirror 1</b> <i class="adjustabletime" begin="1635455700000" end="1635461100000">14:15 - 15:45 (UTC-07:00)</i><br/>
+            <b>Mirror 2</b> <i class="adjustabletime" begin="1635488100000" end="1635493500000">23:15 - 00:45 (UTC-07:00)</i>
+          </span>
+          <div><i>• See the <b>#trivia</b> channel on Slack for details.</i></div>
+      </td></tr>
+      <tr class="success"><td style="padding-top: 20px">
+          <strong>Track B: Student Research Competition Presentations</strong>
+          <span class="pull-right">
+            <b>Mirror 1</b> <i class="adjustabletime" begin="1635455700000" end="1635462900000">14:15 - 16:15 (UTC-07:00)</i><br/>
+            <b>Mirror 2</b> <i class="adjustabletime" begin="1635488100000" end="1635495300000">23:15 - 01:15 (UTC-07:00)</i>
+          </span>
+      </td></tr>
+      <tr><td></td></tr>
+
+      
+      <tr class="success">
+        <td>
+          <strong>"Ask Me Anything" (Mirror 1)</strong><br/>
+          <i>Additional AMA information can be found <a href="ama.html">here</a>.</i>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          David G. Anderson (Carnegie Mellon University), <i>Moderator: Oana Balmau (McGill University)</i>
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635461100000" end="1635462900000">15:45 - 16:15 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          Kimberly Keeton (Google), <i>Moderator: Jian Huang (University of Illinois at Urbana-Champaign)</i>
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635462900000" end="1635464700000">16:15 - 16:45 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr class="success">
+        <td style="padding-top: 20px">
+          <strong>Meet the Sponsors (Mirror 1)</strong><br/>
+          <i>Additional sponsor information can be found <a href="sponsor_sessions.html">here</a>.</i>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          <b>Facebook</b> • See the <b>#sponsors-facebook</b> channel on Slack for more information, or the <a href="flyers/facebook.pdf">Facebook Flyer</a>.
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635464700000" end="1635467400000">16:45 - 17:30 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr><td></td></tr>
+
+      <tr class="success">
+        <td>
+          <strong>"Ask Me Anything" (Mirror 2)</strong><br/>
+          <i>Additional AMA information can be found <a href="ama.html">here</a>.</i>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          Willy Zwaenepoel (The University of Sydney), <i>Moderator: Jinyu Gu (Shanghai Jiao Tong University)</i>
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635493500000" end="1635495300000">00:45 - 01:15 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr class="success ama">
+        <td>
+          Wenguang Chen (Tsinghua University), <i>Moderator: Youyou Lu (Tsinghua University)</i>
+          <span class="pull-right">
+            <i class="adjustabletime" begin="1635495300000" end="1635497100000">01:15 - 01:45 (UTC-07:00)</i>
+          </span>
+        </td>
+      </tr>
+      <tr><td></td></tr>
+    </table>
+    <h2 class="left-h">Friday, October 29, 2021</h2>
+    <table class="table table-spread" style="padding-left:auto;">
+
+      
+
+<tr class="info">
+  <td>
+    <strong>Session 15: Serverless <!--()--></strong>
+    <ul>
+      <li style="padding-left: 20px"><i>Rodrigo Rodrigues (Instituto Superior Técnico (IST - ULisboa), INESC-ID)</i><span class="pull-right" style="text-align: right"><b>Mirror 1</b> <i class="adjustabletime" begin="1635519600000" end="1635523200000">08:00 - 09:00 (UTC-07:00)</i></span></li>
+      <li style="padding-left: 20px"><i>Wenjun Hu (Yale)</i><span class="pull-right" style="text-align: right"><b>Mirror 2</b> <i class="adjustabletime" begin="1635552000000" end="1635555600000">17:00 - 18:00 (UTC-07:00)</i></span></li>
+    </ul>
+  </td>
+</tr>
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635519600000"></span> and <span class="presentationtime" time="1635552000000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483541"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/SgfLK1p3dx4"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span > • <a href="https://youtu.be/KrFse0tvAGE"><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483541">Boki: Stateful Serverless Computing with Shared Logs</a></strong>
+</td></tr>
+<tr><td>Zhipeng Jia (The University of Texas at Austin), Emmett Witchel (The University of Texas at Austin and Katana Graph)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635520800000"></span> and <span class="presentationtime" time="1635553200000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483572"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/S2bOAhCKNWw"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483572">Bladerunner: Stream Processing at Scale for a Live View of Backend Data Mutations at the Edge</a></strong>
+</td></tr>
+<tr><td>Jeff Barber (Facebook), Ximing Yu (Facebook), Laney Kuenzel Zamore (Facebook), Shie Erlich (Facebook), Jerry Lin (Facebook), Vahid Jazayeri (Facebook), Tony Savor (Google), Michael Stumm (University of Toronto)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635522000000"></span> and <span class="presentationtime" time="1635554400000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483580"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/Cbnvm6dJcu8"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span > • <a href="https://youtu.be/V_mttrR5agM"><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483580">Faster and Cheaper Serverless Computing on Harvested Resources</a></strong>
+</td></tr>
+<tr><td>Yanqi Zhang (Cornell University), Inigo Goiri (Microsoft Research), Gohar Irfan Chaudhry (Microsoft Research), Rodrigo Fonseca (Microsoft Research), Sameh Elnikety (Microsoft Research), Christina Delimitrou (Cornell University), Ricardo Bianchini (Microsoft Research)</td></tr>
+
+
+
+
+
+
+
+
+
+      <tr class="success"><td><strong>Break</strong></td></tr><tr><td></td></tr>
+
+
+      
+
+<tr class="info">
+  <td>
+    <strong>Session 16: Smart NICs <!--()--></strong>
+    <ul>
+      <li style="padding-left: 20px"><i>Jon Crowcroft (University of Cambridge)</i><span class="pull-right" style="text-align: right"><b>Mirror 1</b> <i class="adjustabletime" begin="1635524100000" end="1635527700000">09:15 - 10:15 (UTC-07:00)</i></span></li>
+      <li style="padding-left: 20px"><i>KyoungSoo Park (KAIST)</i><span class="pull-right" style="text-align: right"><b>Mirror 2</b> <i class="adjustabletime" begin="1635556500000" end="1635560100000">18:15 - 19:15 (UTC-07:00)</i></span></li>
+    </ul>
+  </td>
+</tr>
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635524100000"></span> and <span class="presentationtime" time="1635556500000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483555"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/EkYeYg8qhK0"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483555">Xenic: SmartNIC-Accelerated Distributed Transactions</a></strong>
+</td></tr>
+<tr><td>Henry N. Schuh (University of Washington), Weihao Liang (University of Washington), Ming Liu (University of Wisconsin at Madison/VMware Research), Jacob Nelson (Microsoft Research), Arvind Krishnamurthy (University of Washington)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635525300000"></span> and <span class="presentationtime" time="1635557700000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483565"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/F4xI4l6iaWc"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483565">LineFS: Efficient SmartNIC Offload of a Distributed File System with Pipeline Parallelism</a></strong>
+</td></tr>
+<tr><td>Jongyul Kim (KAIST), Insu Jang (KAIST), Waleed Reda (Université catholique de Louvain / KTH Royal Institute of Technology), Jaeseong Im (KAIST), Marco Canini (KAUST), Dejan Kostić (KTH Royal Institute of Technology), Youngjin Kwon (KAIST), Simon Peter (University of Texas at Austin), Emmett Witchel (UT Austin)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635526500000"></span> and <span class="presentationtime" time="1635558900000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483583"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/XZ1JkxiZDAY"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483583">Automated SmartNIC Offloading Insights for Network Functions</a></strong>
+</td></tr>
+<tr><td>Yiming Qiu (Rice University), Jiarong Xing (Rice University), Kuo-Feng Hsu (Rice University), Qiao Kang (Rice University), Ming Liu (University of Wisconsin at Madison/VMware Research), Srinivas Narayana (Rutgers University), Ang Chen (Rice University)</td></tr>
+
+
+
+
+
+
+
+
+
+      <tr class="success"><td><strong>Break</strong></td></tr><tr><td></td></tr>
+
+
+      
+
+<tr class="info">
+  <td>
+    <strong>Session 17: Storage <!--()--></strong>
+    <ul>
+      <li style="padding-left: 20px"><i>Simon Peter (UT Austin)</i><span class="pull-right" style="text-align: right"><b>Mirror 1</b> <i class="adjustabletime" begin="1635528600000" end="1635532200000">10:30 - 11:30 (UTC-07:00)</i></span></li>
+      <li style="padding-left: 20px"><i>Haibo Chen (Shanghai Jiao Tong University)</i><span class="pull-right" style="text-align: right"><b>Mirror 2</b> <i class="adjustabletime" begin="1635561000000" end="1635564600000">19:30 - 20:30 (UTC-07:00)</i></span></li>
+    </ul>
+  </td>
+</tr>
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635528600000"></span> and <span class="presentationtime" time="1635561000000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483563"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/RJGAbo3X74w"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span > • <a href="https://youtu.be/T43JL5oZ2O0"><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483563">The Aurora Single Level Store Operating System</a></strong>
+</td></tr>
+<tr><td>Emil Tsalapatis (University of Waterloo), Ryan Hancock (University of Waterloo), Tavian Barnes (University of Waterloo), Ali José Mashtizadeh (University of Waterloo)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635529800000"></span> and <span class="presentationtime" time="1635562200000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483567"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/16Ami3IsYI8"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span > • <a href="https://youtu.be/HZru-vP3XRc"><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483567">WineFS: a hugepage-aware file system for persistent memory that ages gracefully</a></strong>
+</td></tr>
+<tr><td>Rohan Kadekodi (University of Texas at Austin), Saurabh Kadekodi (Carnegie Mellon University), Soujanya Ponnapalli (University of Texas at Austin), Harshad Shirwadkar (Google), Greg Ganger (Carnegie Mellon University), Aasheesh Kolli (Penn State University and VMware Research), Vijay Chidambaram (University of Texas at Austin and VMware Research)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635531000000"></span> and <span class="presentationtime" time="1635563400000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483581"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/J7Ou48NKUis"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span > • <a href="https://youtu.be/7tO2XqWq3kc"><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483581">Scale and Performance in a Filesystem Semi-Microkernel</a></strong>
+</td></tr>
+<tr><td>Jing Liu (University of Wisconsin–Madison), Anthony Rebello (University of Wisconsin–Madison), Yifan Dai (University of Wisconsin–Madison), Chenhao Ye (University of Wisconsin–Madison), Sudarsun Kannan (Rutgers University), Andrea Arpaci-Dusseau (University of Wisconsin–Madison), Remzi Arpaci-Dusseau (University of Wisconsin–Madison)</td></tr>
+
+
+
+
+
+
+
+
+
+      <tr class="success"><td><strong>Break</strong></td></tr><tr><td></td></tr>
+
+
+      
+
+<tr class="info">
+  <td>
+    <strong>Session 18: Verification <!--()--></strong>
+    <ul>
+      <li style="padding-left: 20px"><i>Manos Kapritsos (University of Michigan)</i><span class="pull-right" style="text-align: right"><b>Mirror 1</b> <i class="adjustabletime" begin="1635533100000" end="1635536700000">11:45 - 12:45 (UTC-07:00)</i></span></li>
+      <li style="padding-left: 20px"><i>Chris Hawblitzel (Microsoft Research Redmond)</i><span class="pull-right" style="text-align: right"><b>Mirror 2</b> <i class="adjustabletime" begin="1635565500000" end="1635569100000">20:45 - 21:45 (UTC-07:00)</i></span></li>
+    </ul>
+  </td>
+</tr>
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635533100000"></span> and <span class="presentationtime" time="1635565500000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483540"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/YdxvOPenjWI"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483540">Using Lightweight Formal Methods to Validate a Key-Value Storage Node in Amazon S3</a></strong>
+</td></tr>
+<tr><td>James Bornholt (Amazon Web Services &amp; The University of Texas at Austin), Rajeev Joshi (Amazon Web Services), Vytautas Astrauskas (ETH Zurich), Brendan Cully (Amazon Web Services), Bernhard Kragl (Amazon Web Services), Seth Markle (Amazon Web Services), Kyle Sauri (Amazon Web Services), Drew Schleit (Amazon Web Services), Grant Slatton (Amazon Web Services), Serdar Tasiran (Amazon Web Services), Jacob Van Geffen (University of Washington), Andrew Warfield (Amazon Web Services)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635534300000"></span> and <span class="presentationtime" time="1635566700000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483557"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/Sm4Mkfx5dKM"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483557">CLoF: A Compositional Lock Framework for Multi-level NUMA Systems</a></strong>
+</td></tr>
+<tr><td>Rafael Lourenco de Lima Chehab (Huawei Dresden Research Center, Huawei OS Kernel Lab, Technische Universität Dresden), Antonio Paolillo (Huawei Dresden Research Center, Huawei OS Kernel Lab), Diogo Behrens (Huawei Dresden Research Center, Huawei OS Kernel Lab), Ming Fu (Huawei Dresden Research Center, Huawei OS Kernel Lab), Hermann Härtig (Technische Universität Dresden), Haibo Chen (Huawei OS Kernel Lab, Shanghai Jiao Tong University China)</td></tr>
+
+
+
+
+
+<tr><td>
+    <span class="pull-right">
+      <i><span class="presentationtime" time="1635535500000"></span> and <span class="presentationtime" time="1635567900000"></span></i>
+      <span style="padding: 0 2px !important;"></span> • 
+      <a href="https://dl.acm.org/doi/10.1145/3477132.3483560"><img class="icon-paper" src="images/icon-paper.png"></img> Paper</a>
+      <!--<a href=""><img class="icon-slide" src="images/icon-slide.png"></img></a>-->
+      <span > • <a href="https://youtu.be/qkLFazAIOb4"><img class="icon-video" src="images/icon-video.png"></img> Short</a></span>
+      <span  style='display: none;' > • <a href=""><img class="icon-video" src="images/icon-video.png"></img> Long</a></span>
+    </span>
+    <strong><a href="https://dl.acm.org/doi/10.1145/3477132.3483560">Formal Verification of a Multiprocessor Hypervisor on Arm Relaxed Memory Hardware</a></strong>
+</td></tr>
+<tr><td>Runzhou Tao (Columbia University), Jianan Yao (Columbia University), Xupeng Li (Columbia University), Shih-Wei Li (Columbia University), Jason Nieh (Columbia University), Ronghui Gu (Columbia University)</td></tr>
+
+
+
+
+
+
+
+
+
+      <tr class="success"><td><strong>Break</strong></td></tr><tr><td></td></tr>
+
+
+      <tr class="success"><td>
+          <strong>Closing Ceremony</strong>
+          <span class="pull-right">
+            <b>Mirror 1</b> <i class="adjustabletime" begin="1635537600000" end="1635538500000">13:00 - 13:15 (UTC-07:00)</i><br/>
+            <b>Mirror 2</b> <i class="adjustabletime" begin="1635570000000" end="1635570900000">20:00 - 20:15 (UTC-07:00)</i>
+          </span>
+      </td></tr>
+      <tr><td></td></tr>
+    </table>
+    </div>
+    <div class="clearfix"> </div>
+  </div>
+</div>
+
+
+          <div class="footer">
+            <!--
+              <p>&copy;SIGOPS 2017 &#183; Privacy Policy &#183; All trademarks and registered trademarks are the property of their respective owners.</p>
+            -->
+          </div>
+        </div>
+        <div class="footer-logo">
+          <a href="https://www.sigops.org/sosp/sosp19/" target="_blank">
+            <img src="images/logo.png" id="sosp19logo" alt="SOSP19"/>
+          </a>
+          <div></div>
+          <a href="https://www.sigops.org/" target="_blank">
+            <img src="images/sigops.jpg" alt="SIGOPS"/>
+          </a>
+          <div>In cooperation with</div>
+          <a href="https://www.usenix.org/" target="_blank">
+            <img src="images/usenix.png" alt="USENIX"/>
+          </a>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script> addEventListener("load", function() { setTimeout(hideURLbar, 0); 
+    }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <script src="js/jquery-2.2.2.min.js"></script>
+    <script src="js/bootstrap.js"> </script>
+    <script src="js/move-top.js"></script>
+    <script src="js/easing.js"></script>
+    <script>
+jQuery(document).ready(function($) {
+  $(".scroll").click(function(event){		
+    event.preventDefault();
+    $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+  });
+
+  var tzselector = createTimezoneSelector();
+  selectCurrentTimezone(tzselector);
+  $('#timezoneselector').append(tzselector);
+});
+    </script>
+  </body>
+</html>
